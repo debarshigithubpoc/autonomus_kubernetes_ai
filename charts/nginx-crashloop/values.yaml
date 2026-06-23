@@ -1,13 +1,14 @@
-replicaCount: 1
 image:
-  repository: nginx
-  tag: "latest"
   pullPolicy: IfNotPresent
-
+  repository: nginx
+  tag:
+  - image: null
+    tag: v1.21
+replicaCount: 1
 resources:
-  requests:
-    cpu: 50m
-    memory: 64Mi
   limits:
     cpu: 100m
     memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
