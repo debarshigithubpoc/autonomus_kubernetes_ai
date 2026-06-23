@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nginx-badimage
+description: Nginx with a broken image tag (for SRE agent testing)
+type: application
+version: 1.0.0
+appVersion: "0.0.1"
