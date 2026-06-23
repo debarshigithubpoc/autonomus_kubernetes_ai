@@ -1,13 +1,11 @@
-replicaCount: 1
-image:
-  repository: nginx
-  tag: "this-tag-does-not-exist-99999"
-  pullPolicy: Always
-
-resources:
-  requests:
-    cpu: 50m
-    memory: 64Mi
-  limits:
-    cpu: 100m
-    memory: 128Mi
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coredns
+  labels:
+    k8s-app: coredns
+data:
+  Corefile: |
+    0.0.0.0 @localhost
+    cache
+    log
