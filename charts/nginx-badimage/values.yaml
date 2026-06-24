@@ -1,13 +1,9 @@
+image: nginx:latest
 replicaCount: 1
-image:
-  repository: nginx
-  tag: "this-tag-does-not-exist-99999"
-  pullPolicy: Always
-
 resources:
-  requests:
-    cpu: 50m
-    memory: 64Mi
   limits:
     cpu: 100m
     memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
